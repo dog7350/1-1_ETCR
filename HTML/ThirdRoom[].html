@@ -1,0 +1,324 @@
+﻿<!DOCTYPE Room1.html>
+<html>
+	<head>
+		<title>
+			Third Room
+		</title>
+
+		<link type="text/css" rel="stylesheet" href="CSS\c_background.css">
+		<link type="text/css" rel="stylesheet" href="CSS\Default\c_main-id.css">
+		<link type="text/css" rel="stylesheet" href="CSS\Dynamic\c_dynamic.css">
+		<link type="text/css" rel="stylesheet" href="CSS\Chess\c_Chess.css">
+	</head>
+
+<!--필드 아이템-->
+<!--<label for="i1"><div id="i1div"></div></label>-->
+<!--<label for="i2"><div id="i2div"></div></label>-->
+<!--<label for="i3"><div id="i3div"></div></label>-->
+<!--<label for="i4"><div id="i4div"></div></label>-->
+
+
+	<body>
+		<div id="main_div">
+			<header>
+				Escape The Computer Room
+			</header>
+
+			<section>
+				<input type="radio" name="move" id="R1">
+				<input type="radio" name="move" id="R2">
+				<input type="radio" name="move" id="R3">
+				<input type="radio" name="move" id="R4">
+
+				<input type="radio" name="moniter" id="momax">
+				<input type="radio" name="moniter" id="momin">
+
+				<input type="checkbox" name="login" id="loginbut">
+
+				<input type="radio" name="order" id="ors">
+				<input type="radio" name="order" id="orc">
+
+				<input type="radio" name="mem" id="mes">
+				<input type="radio" name="mem" id="mec">
+
+				<input type="checkbox" name="item" id="i1">
+				<input type="checkbox" name="islot" id="isl1">
+				<input type="checkbox" name="chesspan" id="chesspan1">
+				<input type="checkbox" name="item" id="i2">
+				<input type="checkbox" name="islot" id="isl2">
+				<input type="checkbox" name="chesspan" id="chesspan2">
+
+				<input type="checkbox" name="johapbutton" id="jb1">
+
+
+				<input type="checkbox" name="item" id="i3">
+				<input type="checkbox" name="item" id="i4">
+				<input type="checkbox" name="islot" id="isl3">
+				<input type="checkbox" name="islot" id="isl4">
+				<input type="checkbox" name="johapbutton" id="jb2">
+
+				<input type="checkbox" name="joitem" id="ji1">
+				<input type="checkbox" name="joitem" id="ji2">
+				<input type="checkbox" name="johapbutton" id="jb3">
+
+				<input type="checkbox" name="joitem" id="ji3">
+
+				<input type="checkbox" name="bislot" id="bisl1">
+				<input type="checkbox" name="bislot" id="bisl2">
+				<input type="checkbox" name="bislot" id="bisl3">
+				<input type="checkbox" name="bislot" id="bisl4">
+				<input type="checkbox" name="bjohap" id="bjob">
+
+				<input type="radio" name="gmgoopen" id="gmgoopen">
+				<input type="radio" name="gmgoopen" id="gmgoclose">
+
+				<input type="checkbox" name="gmgoclear" id="gmgoclear">
+
+				<ul>
+
+					<li id="dli1">
+						<div id="div1">
+							<label for="ji1"><div id="ji1div"></div></label>
+							<label for="ji2"><div id="ji2div"></div></label>
+							<label for="ji3"><div id="ji3div"></div></label>
+
+							<label for="jb1"><div id="jb1div"></div></label>
+							<label for="jb2"><div id="jb2div"></div></label>
+							<label for="jb3"><div id="jb3div"></div></label>
+
+							<label for="isl1"><div id="islot1"></div></label>
+							<label for="isl2"><div id="islot2"></div></label>
+							<label for="isl3"><div id="islot3"></div></label>
+							<label for="isl4"><div id="islot4"></div></label>
+
+							<label for="bisl1"><div id="bisd1"></div></label>
+							<label for="bisl2"><div id="bisd2"></div></label>
+							<label for="bisl3"><div id="bisd3"></div></label>
+							<label for="bisl4"><div id="bisd4"></div></label>
+							<label for="bjob"><div id="bjo"></div></label>
+
+							<label for="R4"><div id="R1_R4_move"></div></label>
+							<label for="R2"><div id="R1_R2_move"></div></label>
+
+
+
+
+							<div id="moni_off"></div>
+							<div id="moni"></div>
+
+							<label for="momax"><div id="realmoni"></div></label>
+
+							<div id="monistate">
+								<div id="monitor"></div>
+								<label for="momin"><div id="moclose"></div></label>
+								<label for="mes"><div id="mesdiv"></div></label>
+								<div id="mediv">
+									<label for="mec"><div id="mecdiv"></div></label>
+									<p id="meti">메모장</p>
+									<pre id="mebo">방 벽에 커다란 체스판이 놓여져있다
+
+예전부터 체스를 좋아하던
+나에겐 친숙한 그림이다
+
+그나저나, 이 곳은 대체
+무엇을 하는 곳일까
+혹시 실험실 같은 곳일까?</pre>
+								</div>
+
+								<label for="ors"><div id="orsdiv"></div></label>
+								<div id="ordiv">
+									<label for="orc"><div id="orcdiv"></div></label>
+									<p id="orquti">Third</p>
+									<pre id="orqubo">3번방
+
+폰 - P		룩 - R
+나이트 - N		퀸 - Q
+비숍 - B		킹 - K
+
+체스의 기보를 표기할 땐 기물을 옮기고 싶은 곳의
+주소 좌표를 기물 이니셜의 뒤에 쓰면 된다.
+
+[예] 폰을 가로 e, 세로 4의 위치에 두고 싶다면 Pe4를 적으면 된다.
+
+체크메이트를 하기 위한 백의 다음 수 기보를 대괄호 안에 기입하라.</pre>
+								</div>
+							</div>
+							<div id="desk"></div>
+
+							<div id="gm45"></div>
+
+						</div>
+					</li>
+
+					<li id="dli1">
+						<div id="div2">
+
+							<label for="ji1"><div id="ji1div"></div></label>
+							<label for="ji2"><div id="ji2div"></div></label>
+							<label for="ji3"><div id="ji3div"></div></label>
+
+							<label for="jb1"><div id="jb1div"></div></label>
+							<label for="jb2"><div id="jb2div"></div></label>
+							<label for="jb3"><div id="jb3div"></div></label>
+
+							<label for="isl1"><div id="islot1"></div></label>
+							<label for="isl2"><div id="islot2"></div></label>
+							<label for="isl3"><div id="islot3"></div></label>
+							<label for="isl4"><div id="islot4"></div></label>
+
+							<label for="bisl1"><div id="bisd1"></div></label>
+							<label for="bisl2"><div id="bisd2"></div></label>
+							<label for="bisl3"><div id="bisd3"></div></label>
+							<label for="bisl4"><div id="bisd4"></div></label>
+							<label for="bjob"><div id="bjo"></div></label>
+
+							<label for="R1"><div id="R2_R1_move"></div></label>
+							<label for="R3"><div id="R2_R3_move"></div></label>
+
+
+
+							<label for="i1"><div id="i1div"></div></label>
+
+							<div id="sogmgo"></div>
+							<label for="gmgoopen"><div id="opengmgo"></div></label>
+
+
+							<div id="daegmgo">
+								<form>
+									<input type="radio" name="gmgo" id="do0">
+									<input type="radio" name="gmgo" id="do45">
+									<input type="radio" name="gmgo" id="do90">
+									<input type="radio" name="gmgo" id="do135">
+									<input type="radio" name="gmgo" id="do180">
+									<input type="radio" name="gmgo" id="do225">
+									<input type="radio" name="gmgo" id="do270">
+									<input type="radio" name="gmgo" id="do315">
+									<input type="radio" name="gmgo" id="do360">
+									<input type="radio" name="gmgo" id="do_45">
+									<input type="radio" name="gmgo" id="do_90">
+									<input type="radio" name="gmgo" id="do_135">
+									<input type="radio" name="gmgo" id="do_180">
+									<input type="radio" name="gmgo" id="do_225">
+									<input type="radio" name="gmgo" id="do_270">
+									<input type="radio" name="gmgo" id="do_315">
+									<input type="radio" name="gmgo" id="do_360">
+
+									<input type="checkbox" name="gmkey" id="gmkey1">
+									<input type="checkbox" name="gmkey" id="gmkey2">
+									<input type="checkbox" name="gmkey" id="gmkey3">
+									<input type="checkbox" name="gmkey" id="gmop">
+
+									<div>
+
+										<div id="gmgorol"></div>
+										<div id="gmgorkey"></div>
+
+										<div id="gmreset"><input type="reset" value=""></div>
+										<label for="do0"><div id="gmgor0"></div></label>
+										<label for="do45"><div id="gmgor45"></div></label>
+										<label for="do90"><div id="gmgor90"></div></label>
+										<label for="do135"><div id="gmgor135"></div></label>
+										<label for="do180"><div id="gmgor180"></div></label>
+										<label for="do225"><div id="gmgor225"></div></label>
+										<label for="do270"><div id="gmgor270"></div></label>
+										<label for="do315"><div id="gmgor315"></div></label>
+										<label for="do360"><div id="gmgor360"></div></label>
+										<label for="do_45"><div id="gmgor_45"></div></label>
+										<label for="do_90"><div id="gmgor_90"></div></label>
+										<label for="do_135"><div id="gmgor_135"></div></label>
+										<label for="do_180"><div id="gmgor_180"></div></label>
+										<label for="do_225"><div id="gmgor_225"></div></label>
+										<label for="do_270"><div id="gmgor_270"></div></label>
+										<label for="do_315"><div id="gmgor_315"></div></label>
+										<label for="do_360"><div id="gmgor_360"></div></label>
+
+
+
+										<div>
+											<label for="gmkey1"><div id="gmgorkey1"></div></label>
+											<label for="gmkey2"><div id="gmgorkey2"></div></label>
+											<label for="gmkey3"><div id="gmgorkey3"></div></label>
+											<label for="gmgoclear"><div id="gmkeyop"></div></label>
+
+											<label for="gmgoclose"><div id="gmclo"></div></label>
+
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</li>
+
+					<li id="dli1">
+						<div id="div3">
+							<label for="ji1"><div id="ji1div"></div></label>
+							<label for="ji2"><div id="ji2div"></div></label>
+							<label for="ji3"><div id="ji3div"></div></label>
+
+							<label for="jb1"><div id="jb1div"></div></label>
+							<label for="jb2"><div id="jb2div"></div></label>
+							<label for="jb3"><div id="jb3div"></div></label>
+
+							<label for="isl1"><div id="islot1"></div></label>
+							<label for="isl2"><div id="islot2"></div></label>
+							<label for="isl3"><div id="islot3"></div></label>
+							<label for="isl4"><div id="islot4"></div></label>
+
+							<label for="bisl1"><div id="bisd1"></div></label>
+							<label for="bisl2"><div id="bisd2"></div></label>
+							<label for="bisl3"><div id="bisd3"></div></label>
+							<label for="bisl4"><div id="bisd4"></div></label>
+							<label for="bjob"><div id="bjo"></div></label>
+
+							<label for="R2"><div id="R3_R2_move"></div></label>
+							<label for="R4"><div id="R3_R4_move"></div></label>
+
+
+							<label for="i2"><div id="i2div"></div></label>
+
+							<div id="doordiv"></div>
+
+							<div id="gm315"></div>
+						</div>
+					</li>
+
+					<li id="dli1">
+						<div id="div4">
+							<label for="ji1"><div id="ji1div"></div></label>
+							<label for="ji2"><div id="ji2div"></div></label>
+							<label for="ji3"><div id="ji3div"></div></label>
+
+							<label for="jb1"><div id="jb1div"></div></label>
+							<label for="jb2"><div id="jb2div"></div></label>
+							<label for="jb3"><div id="jb3div"></div></label>
+
+							<label for="isl1"><div id="islot1"></div></label>
+							<label for="isl2"><div id="islot2"></div></label>
+							<label for="isl3"><div id="islot3"></div></label>
+							<label for="isl4"><div id="islot4"></div></label>
+
+							<label for="bisl1"><div id="bisd1"></div></label>
+							<label for="bisl2"><div id="bisd2"></div></label>
+							<label for="bisl3"><div id="bisd3"></div></label>
+							<label for="bisl4"><div id="bisd4"></div></label>
+							<label for="bjob"><div id="bjo"></div></label>
+
+							<label for="R3"><div id="R4_R3_move"></div></label>
+							<label for="R1"><div id="R4_R1_move"></div></label>
+
+
+							<div id="gm180"></div>
+							<div id="chepan">
+								<div id="bakqu"></div>
+								<div id="hkkin"></div>
+								<label for="chesspan1"><div id="chehit1"></div></label>
+								<label for="chesspan2"><div id="chehit2"></div></label>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+</html>

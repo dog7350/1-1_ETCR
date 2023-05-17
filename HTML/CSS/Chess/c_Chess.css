@@ -1,0 +1,1291 @@
+/* game system */
+
+	#sogmgo{
+		position:absolute;
+		left:1200px;
+		top:450px;
+		width:500px;
+		height:500px;
+		background-image:url("i_gmclo.png");
+	}
+	#opengmgo{
+		position:absolute;
+		left:1280px;
+		top:600px;
+		width:310px;
+		height:280px;
+		cursor:pointer;
+	}
+	#daegmgo{
+		display:none;
+	}
+	#gmclo{
+		display:block;
+		position:absolute;
+		left:3px;
+		top:760px;
+		z-index:2;
+		width:150px;
+		height:150px;
+		background:url("i_down_move.png") no-repeat;
+		cursor:pointer;
+	}
+	#gmclo:hover{
+		background:url("i_down_hover_move.png") no-repeat;
+	}
+	#chepan{
+		position:absolute;
+		left:300px;
+		top:40px;
+		width:700px;
+		height:666px;
+		background-image:url("i_chesspan.png");
+	}
+	#chehit1{
+		position:absolute;
+		left:445px;
+		top:5px;
+		width:70px;
+		height:70px;
+		cursor:pointer;
+	}
+	#chesspan1:checked ~ ul #chehit1{
+		border:1px solid gray;
+	}
+	#chehit2{
+		position:absolute;
+		left:533px;
+		top:172px;
+		width:70px;
+		height:70px;
+		cursor:pointer;
+	}
+	#chesspan2:checked ~ ul #chehit2{
+		border:1px solid gray;
+	}
+	#bakqu{
+		display:none;
+	}
+	#hkkin{
+		display:none;
+	}
+	#gm45{
+		position:absolute;
+		left:1150px;
+		top:490px;
+		z-index:-1;
+		width:380px;
+		height:180px;
+		background-image:url("i_45.png");
+	}
+	#gm180{
+		position:absolute;
+		left:1400px;
+		top:830px;
+		width:380px;
+		height:100px;
+		background-size:380px 100px;
+		background-image:url("i_180.png");
+	}
+	#gm315{
+		position:absolute;
+		left:-40px;
+		top:700px;
+		width:300px;
+		height:100px;
+		background-size:300px 100px;
+		background-image:url("i_315.png");
+	}
+/* 체스방 설정 */
+
+	#i1:checked + #isl1:checked + #chesspan1:checked ~ ul #bakqu{
+		display:block;
+		position:absolute;
+		left:439px;
+		top:-1px;
+		width:85px;
+		height:85px;
+		background-color:black;
+		background-image:url("i_bakquim.png");
+	}
+	#i1:checked + #isl1:checked + #chesspan1:checked ~ ul #chehit1{
+		display:none;
+	}
+	#i1:checked + #isl1:checked + #chesspan1:checked ~ ul #islot1{
+		display:none;
+	}
+	#i2:checked + #isl2:checked + #chesspan2:checked ~ ul #hkkin{
+		display:block;
+		position:absolute;
+		left:525px;
+		top:168px;
+		width:85px;
+		height:85px;
+		background-image:url("i_hkkinim.png");
+	}
+	#i2:checked + #isl2:checked + #chesspan2:checked ~ ul #chehit2{
+		display:none;
+	}
+	#i2:checked + #isl2:checked + #chesspan2:checked ~ ul #islot2{
+		display:none;
+	}
+	#i1:checked + #isl1:checked + #chesspan1:checked + #i2:checked + #isl2:checked + #chesspan2:checked ~ ul #moni_off{
+		display:none;
+	}
+/* 체스판 설정 */
+
+	input[type=reset]{
+		width:100%;
+		height:100%;
+		opacity:0;
+		cursor:pointer;
+	}
+	#gmgoopen:checked ~ ul #daegmgo{
+		display:block;
+		position:absolute;
+		left:10px;
+		top:10px;
+		width:1900px;
+		height:920px;
+		background-size:1900px 920px;
+		background-image:url("i_daegm.jpg");
+	}
+	#gmgor0{
+		display:none;
+	}
+	#gmgor90{
+		display:none;
+	}
+	#gmgor135{
+		display:none;
+	}
+	#gmgor180{
+		display:none;
+	}
+	#gmgor225{
+		display:none;
+	}
+	#gmgor270{
+		display:none;
+	}
+	#gmgor315{
+		display:none;
+	}
+	#gmgor360{
+		display:none;
+	}
+	#gmgor_90{
+		display:none;
+	}
+	#gmgor_135{
+		display:none;
+	}
+	#gmgor_180{
+		display:none;
+	}
+	#gmgor_225{
+		display:none;
+	}
+	#gmgor_270{
+		display:none;
+	}
+	#gmgor_315{
+		display:none;
+	}
+	#gmgor_360{
+		display:none;
+	}
+	#gmkey1:checked + #gmkey2:checked + #gmkey3:checked ~ #gmreset{
+		display:none;
+	}
+	#gmkey1:checked + #gmkey2:checked + #gmkey3:checked ~ div #gmkeyop{
+		display:block;
+		position:absolute;
+		left:855px;
+		top:50px;
+		z-index:1;
+		width:181px;
+		height:184px;
+		background-image:url("i_gmopkey.png");
+		cursor:pointer;
+	}
+	#gmkey1:checked + #gmkey2:checked + #gmkey3:checked ~ div #gmkeyop:active{
+		background-image:url("i_gmopkey_active.png");
+	}
+	#gmgoclear:checked ~ ul #daegmgo{
+		display:none !important;
+	}
+	#gmgoclear:checked ~ ul #opengmgo{
+		display:none;
+	}
+	#gmgoclear:checked ~ ul #sogmgo{
+		position:absolute;
+		left:890px;
+		width:815px;
+		background-image:url("i_gmopen.png");
+	}
+	#gmgoclear:checked ~ ul #i1div{
+		display:block;
+		position:absolute;
+		left:1400px;
+		top:800px;
+		z-index:3;
+		width:35px;
+		height:52px;
+		background-image:url("i_filed_quin.png");
+		cursor:pointer;
+	}
+	#gmgorol{
+		position:absolute;
+		left:565px;
+		top:200px;
+		z-index:0;
+		width:750px;
+		height:750px;
+		transition:0.3s;
+		background-image:url("i_gmgorol.png");
+	}
+	#gmgorkey{
+		position:absolute;
+		left:855px;
+		top:480px;
+		width:170px;
+		height:166px;
+		background-image:url("i_gmrolkey.png");
+		cursor:pointer;
+	}
+	#gmgorkey:active{
+		background-image:url("i_gmrolkey_active.png");
+	}
+	#gmgor_45{
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#gmgor_45:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#gmgor45{
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#gmgor45:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+	#gmreset{
+		position:absolute;
+		left:855px;
+		top:50px;
+		z-index:1;
+		width:181px;
+		height:184px;
+		background-image:url("i_gmopkey.png");
+		cursor:pointer;
+	}
+	#gmreset:active{
+		background-image:url("i_gmopkey_active.png");
+	}
+/* 금고 설정 */
+
+	#i1div{
+		display:none;
+	}
+	#i2div{
+		position:absolute;
+		left:1670px;
+		top:820px;
+		width:65px;
+		height:49px;
+		background-image:url("i_filed_king.png");
+		cursor:pointer;
+	}
+	#i3div{
+		position:absolute;
+		left:430px;
+		top:20px;
+		width:15px;
+		height:15px;
+		background-color:red;
+		cursor:pointer;
+	}
+	#i4div{
+		position:absolute;
+		left:800px;
+		top:900px;
+		width:15px;
+		height:15px;
+		background-color:red;
+		cursor:pointer;
+	}
+/* 아이템 끝 */
+
+	#jb1div{
+		position:absolute;
+		left:1780px;
+		top:650px;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#jb1div:hover{
+		background:url("i_jobuh.jpg") no-repeat;
+	}
+	#jb1:checked ~ ul #jb1div{
+		background:url("i_jobua.jpg") no-repeat;
+	}
+	#jb2div{
+		display:none;
+	}
+	#jb2div:hover{
+		background:url("i_jobuh.jpg") no-repeat !important;
+	}
+	#jb2:checked ~ ul #jb2div{
+		background:url("i_jobua.jpg") no-repeat !important;
+	}
+	#jb3div{
+		display:none;
+	}
+	#jb3div:hover{
+		background:url("i_jobuh.jpg") no-repeat !important;
+	}
+	#jb3:checked ~ ul #jb3div{
+		background:url("i_jobua.jpg") no-repeat !important;
+	}
+/* 아이템 조합 버튼 끝 */
+
+	#ji1div{
+		display:none;
+	}
+	#ji2div{
+		display:none;
+	}
+	#ji3div{
+		display:none;
+	}
+/* 조합 아이템 끝 */
+
+	#doordiv{
+		position:absolute;
+		left:670px;
+		top:50px;
+		width:550px;
+		height:800px;
+		background:url("i_Door.png") no-repeat;
+		cursor:no-drop;
+	}
+	#dd:checked ~ ul #doordiv{
+		border:0.1px solid gray;
+	}
+	#door_opendiv{
+		display:none;
+	}
+/* 문 끝 */
+
+	#islot1{
+		position:absolute;
+		left:1780px;
+		top:2px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#islot2{
+		position:absolute;
+		left:1780px;
+		top:152px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#islot3{
+		position:absolute;
+		left:1780px;
+		top:302px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#islot4{
+		position:absolute;
+		left:1780px;
+		top:452px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 아이템 기본 슬롯 끝 */
+
+	#bisd1{
+		position:absolute;
+		left:1780px;
+		top:2px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bisd2{
+		position:absolute;
+		left:1780px;
+		top:152px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bisd3{
+		position:absolute;
+		left:1780px;
+		top:302px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bisd4{
+		position:absolute;
+		left:1780px;
+		top:452px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bjo{
+		position:absolute;
+		left:1780px;
+		top:650px;
+		z-index:-1;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 백그라운드 아이템 슬롯 끝*/
+
+	#bisl1:checked ~ ul #bisd1{
+		border:3px outset skyblue;
+	}
+	#bisl2:checked ~ ul #bisd2{
+		border:3px outset skyblue;
+	}
+	#bisl3:checked ~ ul #bisd3{
+		border:3px outset skyblue;
+	}
+	#bisl4:checked ~ ul #bisd4{
+		border:3px outset skyblue;
+	}
+	#bjo:hover{
+		background:url("i_jobuh.jpg") no-repeat;
+	}
+	#bjob:checked ~ ul #bjo{
+		background:url("i_jobua.jpg") no-repeat;
+	}
+/* 백그라운드 아이템 슬롯 선택 끝*/
+
+	#i1:checked ~ ul #islot1{
+		background-image:url("i_item_quin.png");
+	}
+	#i1:checked ~ ul #i1div{
+		display:none;
+	}
+	#i2:checked ~ ul #islot2{
+		background-image:url("i_item_king.png");
+	}
+	#i2:checked ~ ul #i2div{
+		display:none;
+	}
+	#i3:checked ~ ul #islot3{
+		background-color:red;
+	}
+	#i3:checked ~ ul #i3div{
+		display:none;
+	}
+	#i4:checked ~ ul #islot4{
+		background-color:red;
+	}
+	#i4:checked ~ ul #i4div{
+		display:none;
+	}
+
+/* 기본 아이템 획득 끝 */
+
+	#isl1:checked ~ ul #islot1{
+		border:3px outset skyblue;
+	}
+	#isl2:checked ~ ul #islot2{
+		border:3px outset skyblue;
+	}
+	#isl3:checked ~ ul #islot3{
+		border:3px outset skyblue;
+	}
+	#isl4:checked ~ ul #islot4{
+		border:3px outset skyblue;
+	}
+	#ji1:checked ~ ul #ji1div{
+		border:3px outset skyblue;
+	}
+	#ji2:checked ~ ul #ji2div{
+		border:3px outset skyblue;
+	}
+	#ji3:checked ~ ul #ji3div{
+		border:3px outset skyblue;
+	}
+/* 획득 아이템 선택 끝 */
+
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #ji1div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:2px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #islot1{
+		display:none;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #islot2{
+		display:none;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #jb1div{
+		display:none;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #jb2div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:650px;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 처음 아이템 조합 끝 */
+
+	#i3:checked + #i4:checked + #isl3:checked + #isl4:checked + #jb2:checked ~ ul #ji2div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:152px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#i3:checked + #i4:checked + #isl3:checked + #isl4:checked + #jb2:checked ~ ul #islot3{
+		display:none;
+	}
+	#i3:checked + #i4:checked + #isl3:checked + #isl4:checked + #jb2:checked ~ ul #islot4{
+		display:none;
+	}
+	#i3:checked + #i4:checked + #isl3:checked + #isl4:checked + #jb2:checked ~ ul #jb2div{
+		display:none;
+	}
+	#i3:checked + #i4:checked + #isl3:checked + #isl4:checked + #jb2:checked ~ ul #jb3div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:650px;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 두번째 아이템 조합 끝 */
+
+	#ji1:checked + #ji2:checked + #jb3:checked ~ ul #ji3div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:2px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#ji1:checked + #ji2:checked + #jb3:checked ~ ul #ji1div{
+		display:none !important;
+	}
+	#ji1:checked + #ji2:checked + #jb3:checked ~ ul #ji2div{
+		display:none !important;
+	}
+	#ji1:checked + #ji2:checked + #jb3:checked ~ ul #jb3div{
+		display:none !important;
+	}
+/* 마지막 아이템 조합 끝 */
+
+	#ji3:checked ~ ul #doordiv{
+		cursor:pointer !important;
+	}
+	#ji3:checked + #dd:checked ~ ul #ji3div{
+		display:none !important;
+	}
+	#ji3:checked + #dd:checked ~ ul #doordiv{
+		display:none;
+	}
+	#ji3:checked + #dd:checked ~ ul #door_opendiv{
+		display:block;
+		position:absolute;
+		left:670px;
+		top:50px;
+		width:550px;
+		height:800px;
+		background-color:brown;
+		cursor:pointer;
+	}
+
+
+/* 금고 회전식 */
+
+	#do45:checked ~ div #gmgorol{
+		transform:rotate(45deg);
+	}
+	#do45:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do45:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do45:checked ~ div #gmgor0{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do45:checked ~ div #gmgor0:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do45:checked ~ div #gmgor90{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do45:checked ~ div #gmgor90:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 45도 회전 */
+
+	#do90:checked ~ div #gmgorol{
+		transform:rotate(90deg);
+	}
+	#do90:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do90:checked ~ div #gmgor45{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do90:checked ~ div #gmgor45:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do90:checked ~ div #gmgor135{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do90:checked ~ div #gmgor135:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 90도 회전 */
+
+	#do135:checked ~ div #gmgorol{
+		transform:rotate(135deg);
+	}
+	#do135:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do135:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do135:checked ~ div #gmgor90{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do135:checked ~ div #gmgor90:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do135:checked ~ div #gmgor180{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do135:checked ~ div #gmgor180:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 135도 회전 */
+
+	#do180:checked ~ div #gmgorol{
+		transform:rotate(180deg);
+	}
+	#do180:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do180:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do180:checked ~ div #gmgor135{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do180:checked ~ div #gmgor135:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do180:checked ~ div #gmgor225{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do180:checked ~ div #gmgor225:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 180도 회전 */
+
+	#do225:checked ~ div #gmgorol{
+		transform:rotate(225deg);
+	}
+	#do225:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do225:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do225:checked ~ div #gmgor180{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do225:checked ~ div #gmgor180:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do225:checked ~ div #gmgor270{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do225:checked ~ div #gmgor270:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 225도 회전 */
+
+	#do270:checked ~ div #gmgorol{
+		transform:rotate(270deg);
+	}
+	#do270:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do270:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do270:checked ~ div #gmgor225{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do270:checked ~ div #gmgor225:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do270:checked ~ div #gmgor315{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do270:checked ~ div #gmgor315:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 270도 회전 */
+
+	#do315:checked ~ div #gmgorol{
+		transform:rotate(315deg);
+	}
+	#do315:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do315:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do315:checked ~ div #gmgor270{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do315:checked ~ div #gmgor270:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do315:checked ~ div #gmgor360{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do315:checked ~ div #gmgor360:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 315도 회전 */
+
+	#do360:checked ~ div #gmgorol{
+		transform:rotate(360deg);
+	}
+	#do360:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do360:checked ~ div #gmgor315{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do360:checked ~ div #gmgor315:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do360:checked ~ div #gmgor45{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do360:checked ~ div #gmgor45:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 360도 회전 */
+	#do0:checked ~ div #gmgorol{
+		transform:rotate(0deg);
+	}
+/* 0도 */
+
+	#do_45:checked ~ div #gmgorol{
+		transform:rotate(-45deg);
+	}
+	#do_45:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do_45:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_45:checked ~ div #gmgor_90{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_45:checked ~ div #gmgor_90:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_45:checked ~ div #gmgor0{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_45:checked ~ div #gmgor0:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+	#do_45:checked ~ div #gmgorkey{
+		display:none;
+	}
+	#do_45:checked ~ div #gmgorkey1{
+		display:block;
+		position:absolute;
+		left:855px;
+		top:480px;
+		width:170px;
+		height:166px;
+		background-image:url("i_gmrolkey.png");
+		cursor:pointer;
+	}
+	#do_45:checked ~ div #gmgorkey1:active{
+		background-image:url("i_gmrolkey_active.png");
+	}
+/* 45도 회전 */
+
+	#do_90:checked ~ div #gmgorol{
+		transform:rotate(-90deg);
+	}
+	#do_90:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_90:checked ~ div #gmgor_135{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_90:checked ~ div #gmgor_135:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_90:checked ~ div #gmgor_45{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_90:checked ~ div #gmgor_45:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 90도 회전 */
+
+	#do_135:checked ~ div #gmgorol{
+		transform:rotate(-135deg);
+	}
+	#do_135:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do_135:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_135:checked ~ div #gmgor_180{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_135:checked ~ div #gmgor_180:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_135:checked ~ div #gmgor_90{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_135:checked ~ div #gmgor_90:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 135도 회전 */
+
+	#do_180:checked ~ div #gmgorol{
+		transform:rotate(-180deg);
+	}
+	#do_180:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do_180:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_180:checked ~ div #gmgor_225{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_180:checked ~ div #gmgor_225:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_180:checked ~ div #gmgor_135{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_180:checked ~ div #gmgor_135:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+	#do_180:checked ~ div #gmgorkey{
+		display:none;
+	}
+	#do_180:checked ~ div #gmgorkey2{
+		display:block;
+		position:absolute;
+		left:855px;
+		top:480px;
+		width:170px;
+		height:166px;
+		background-image:url("i_gmrolkey.png");
+		cursor:pointer;
+	}
+	#do_180:checked ~ div #gmgorkey2:active{
+		background-image:url("i_gmrolkey_active.png");
+	}
+/* 180도 회전 */
+
+	#do_225:checked ~ div #gmgorol{
+		transform:rotate(-225deg);
+	}
+	#do_225:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do_225:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_225:checked ~ div #gmgor_270{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_225:checked ~ div #gmgor_270:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_225:checked ~ div #gmgor_180{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_225:checked ~ div #gmgor_180:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 225도 회전 */
+
+	#do_270:checked ~ div #gmgorol{
+		transform:rotate(-270deg);
+	}
+	#do_270:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do_270:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_270:checked ~ div #gmgor_315{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_270:checked ~ div #gmgor_315:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_270:checked ~ div #gmgor_225{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_270:checked ~ div #gmgor_225:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 270도 회전 */
+
+	#do_315:checked ~ div #gmgorol{
+		transform:rotate(-315deg);
+	}
+	#do_315:checked ~ div #gmgor_45{
+		display:none;
+	}
+	#do_315:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_315:checked ~ div #gmgor_360{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_315:checked ~ div #gmgor_360:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_315:checked ~ div #gmgor_270{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_315:checked ~ div #gmgor_270:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+	#do_315:checked ~ div #gmgorkey{
+		display:none;
+	}
+	#do_315:checked ~ div #gmgorkey3{
+		display:block;
+		position:absolute;
+		left:855px;
+		top:480px;
+		width:170px;
+		height:166px;
+		background-image:url("i_gmrolkey.png");
+		cursor:pointer;
+	}
+	#do_315:checked ~ div #gmgorkey3:active{
+		background-image:url("i_gmrolkey_active.png");
+	}
+/* 315도 회전 */
+
+	#do_360:checked ~ div #gmgorol{
+		transform:rotate(-360deg);
+	}
+	#do_360:checked ~ div #gmgor45{
+		display:none;
+	}
+	#do_360:checked ~ div #gmgor_45{
+		display:block;
+		position:absolute;
+		left:620px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolleft.png");
+		cursor:pointer;
+	}
+	#do_360:checked ~ div #gmgor_45:active{
+		background-image:url("i_gmrolleft_active.png");
+	}
+	#do_360:checked ~ div #gmgor_315{
+		display:block;
+		position:absolute;
+		left:1150px;
+		top:50px;
+		width:127px;
+		height:177px;
+		background-image:url("i_gmrolright.png");
+		cursor:pointer;
+	}
+	#do_360:checked ~ div #gmgor_315:active{
+		background-image:url("i_gmrolright_active.png");
+	}
+/* 360도 회전 */
+/* 체스방 탈출 끝 */

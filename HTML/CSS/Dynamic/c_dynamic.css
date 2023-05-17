@@ -1,0 +1,374 @@
+/* dynamic.css */
+			ul, li {
+				list-style:none;
+			}
+			div input[type=radio] {
+				display:none;
+			}
+			div input[type=checkbox]{
+				display:none;
+			}
+
+
+
+			#main_div {
+				position:absolute;
+				width:1920px;
+				height:940px;
+				left:0px;
+				top:-3px;
+				overflow:hidden;
+			}
+			#main_div ul #div1,#div2,#div3,#div4,#divh{
+				width:200%;
+				height:200%;
+				transition:1s;
+			}
+			#main_div ul:after {
+				content:"";
+				display:block;
+				clear:both;
+			}
+			#main_div #dli1 {
+				float:top;
+				width:100%;
+				height:100%;
+			}
+/* 메인화면 구성 */
+
+			#moni_off{
+				position:absolute;
+				left:780px;
+				top:380px;
+				z-index:3;
+				width:350px;
+				height:300px;
+				background-size:350px 350px;
+				background-image:url("i_smallmonitor_off.png");
+			}
+			#moni{
+				position:absolute;
+				left:780px;
+				top:380px;
+				z-index:1;
+				width:350px;
+				height:300px;
+				background-size:350px 350px;
+				background-image:url("i_smallmonitor_on.png");
+			}
+			#realmoni{
+				position:absolute;
+				left:830px;
+				top:455px;
+				z-index:2;
+				width:250px;
+				height:120px;
+				cursor:pointer;
+			}
+			#monistate{
+				display:none;
+			}
+			#moclose{
+				display:none;
+			}
+			#orsdiv{
+				display:none;
+			}
+			#ordiv{
+				display:none;
+			}
+			#orcdiv{
+				display:none;
+			}
+			#mesdiv{
+				display:none;
+			}
+			#mediv{
+				display:none;
+			}
+			#mecdiv{
+				display:none;
+			}
+
+			#monitor{
+				position:absolute;
+				left:300px;
+				top:150px;
+				z-index:-2;
+				width:1272px;
+				height:793px;
+				background-image:url("i_monitor.png");
+			}
+			#momax:checked ~ ul #moclose{
+				display:block;
+				position:absolute;
+				left:3px;
+				top:770px;
+				z-index:2;
+				width:150px;
+				height:150px;
+				background:url("i_down_move.png") no-repeat;
+				cursor:pointer;
+			}
+			#momax:checked ~ ul #moclose:hover{
+				background:url("i_down_hover_move.png") no-repeat;
+			}
+			#momax:checked ~ ul #diff{
+				display:block;
+				position:absolute;
+				left:1510px;
+				top:810px;
+				z-index:2;
+				width:5px;
+				height:5px;
+				cursor:pointer;
+				background-size:5px 5px;
+				background-image:url("i_hard.png");
+			}
+			#momax:checked ~ ul #diff:hover{
+				background-image:url("i_hard_s.gif")
+			}
+			#momin:checked ~ ul #diff{
+				display:none;
+			}
+			#momax:checked ~ ul #monistate{
+				display:block;
+				position:absolute;
+				left:0px;
+				top:0px;
+				z-index:2;
+				width:1920px;
+				height:938px;
+				background-image:url("i_monibackground.png");
+			}
+			#momax:checked ~ ul #orsdiv{
+				display:block;
+				position:absolute;
+				left:380px;
+				top:190px;
+				z-index:-1;
+				background-image:url("i_icon_quest.png");
+				width:70px;
+				height:70px;
+				cursor:pointer;
+			}
+			#ors:checked ~ ul #ordiv{
+				display:block;
+				background-size:668px 366px;
+				background-image:url("i_quest.png");
+				position:absolute;
+				left:800px;
+				top:230px;
+				width:668px;
+				height:366px;
+			}
+			#orquti{
+				position:absolute;
+				left:16px;
+				top:8px;
+				font-size:10pt;
+			}
+			#orqubo{
+				position:absolute;
+				left:15px;
+				top:35px;
+				font-family:"nanum gothic";
+				font-size:14pt;
+				color:white;
+			}
+			#ors:checked ~ ul #orcdiv{
+				display:block;
+				position:absolute;
+				left:639px;
+				top:5px;
+				width:23px;
+				height:23px;
+				cursor:pointer;
+			}
+			#orc:checked ~ ul #ordiv{
+				display:none;
+			}
+
+			#momax:checked ~ ul #mesdiv{
+				display:block;
+				position:absolute;
+				left:380px;
+				top:290px;
+				z-index:-1;
+				background-image:url("i_icon_memo.png");
+				width:70px;
+				height:70px;
+				cursor:pointer;
+			}
+			#mes:checked ~ ul #mediv{
+				display:block;
+				background-size:343px 411px;
+				background-image:url("i_memo.png");
+				position:absolute;
+				left:450px;
+				top:240px;
+				width:343px;
+				height:411px;
+			}
+			#meti{
+				position:absolute;
+				left:16px;
+				top:8px;
+				font-size:10pt;
+			}
+			#mebo{
+				position:absolute;
+				left:16px;
+				top:35px;
+				font-family:"nanum gothic";
+				font-size:14pt;
+			}
+			#mes:checked ~ ul #mecdiv{
+				display:block;
+				position:absolute;
+				left:314px;
+				top:5px;
+				width:23px;
+				height:23px;
+				cursor:pointer;
+			}
+			#mec:checked ~ ul #mediv{
+				display:none;
+			}
+/* 지령 끝 */
+
+
+			#R1:checked ~ ul #div1{
+				z-index:2;
+				position:absolute;
+				top:2px;
+				left:0px;
+			}
+			#R1:checked ~ ul #div2{
+				z-index:3;
+				positon:absolute;
+				top:2px;
+				left:1921px;
+			}
+			#R1:checked ~ ul #div4{
+				z-index:1;
+				position:absolute;
+				top:2px;
+				left:-1919px;
+			}
+			#R1:checked ~ ul #div3{
+				z-index:0;
+				position:absolute;
+				top:2px;
+				left:3842px;
+			}
+
+
+
+			#R2:checked ~ ul #div2{
+				z-index:2;
+				position:absolute;
+				top:2px;
+				left:0px;
+			}
+			#R2:checked ~ ul #div3{
+				z-index:3;
+				position:absolute;
+				top:2px;
+				left:1921px;
+			}
+			#R2:checked ~ ul #div1{
+				z-index:1;
+				position:absolute;
+				top:2px;
+				left:-1919px;
+			}
+			#R2:checked ~ ul #div4{
+				z-index:0;
+				position:absolute;
+				top:2px;
+				left:3842px;
+			}
+
+
+
+			#R3:checked ~ ul #div3{
+				z-index:2;
+				position:absolute;
+				top:2px;
+				left:0px;
+			}
+			#R3:checked ~ ul #div4{
+				z-index:3;
+				position:absolute;
+				top:2px;
+				left:1921px;
+			}
+			#R3:checked ~ ul #div2{
+				z-index:1;
+				position:absolute;
+				top:2px;
+				left:-1919px;
+			}
+			#R3:checked ~ ul #div1{
+				z-index:0;
+				position:absolute;
+				top:2px;
+				left:3842px;
+			}
+
+
+
+			#R4:checked ~ ul #div4{
+				z-index:2;
+				position:absolute;
+				top:2px;
+				left:0px;
+			}
+			#R4:checked ~ ul #div1{
+				z-index:3;
+				position:absolute;
+				top:2px;
+				left:1921px;
+			}
+			#R4:checked ~ ul #div3{
+				z-index:1;
+				position:absolute;
+				top:2px;
+				left:-1919px;
+			}
+			#R4:checked ~ ul #div2{
+				z-index:0;
+				position:absolute;
+				top:2px;
+				left:3842px;
+			}
+
+/* 방 위치 끝 */
+
+			#nom:checked ~ ul #divh{
+				z-index:3;
+				position:absolute;
+				top:971px;
+				left:0px;
+			}
+			#nome:checked ~ ul #div1{
+				z-index:2;
+				position:absolute;
+				top:2px;
+				left:0px;
+			}
+			#har:checked ~ ul #divh{
+				z-index:3;
+				position:absolute;
+				top:2px;
+				left:0px;
+			}
+			#har:checked ~ ul #div1{
+				z-index:2;
+				position:absolute;
+				top:-971px;
+				left:0px;
+			}
+
+/* 히든 하드모드 전환 끝 */

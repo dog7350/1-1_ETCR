@@ -1,0 +1,292 @@
+/* main-id.css */
+			*{
+				margin:0;
+				padding:0;
+				font-family:"nanum gothic";
+			}
+			footer{
+				position:absolute;
+				left:15px;
+				top:1360px;
+				width:700px;
+				height:40px;
+				font-family:"nanum gothic";
+				font-size:10pt;
+				color:white;
+			}
+/* 기본 페이지 세팅 */
+
+			#main_bgi{
+				position:absolute;
+				left:0px;
+				top:0px;
+				padding-left:390px;
+				width:1903px;
+				height:1400px;
+				background-position:0px 400px;
+				background-image:url("i_mainbackground.png");
+				background-repeat:no-repeat;
+			}
+			#main_bgi_guide{
+				position:absolute;
+				left:0px;
+				top:0px;
+				text-align:center;
+				width:1903px;
+				height:1400px;
+				background-position:0px 400px;
+				background-image:url("i_mainbackground.png");
+				background-repeat:no-repeat;
+			}
+			#ETC{
+				position:absolute;
+				left:520px;
+				top:0px;
+				z-index:1;
+				width:883px;
+				height:371px;
+				background-image:url("i_ETCR.png");
+			}
+			#gast{
+				position:absolute;
+				left:575px;
+				top:600px;
+				width:770px;
+				height:243px;
+				background-image:url("i_GAMESTART.png");
+				overflow:hidden;
+			}
+			
+
+
+			#intro_div{
+				position:absolute;
+				left:0px;
+				top:0px;
+				overflow:hidden;
+				background-color:rgb(20,20,20);
+				width:1903px;
+				height:1400px;
+			}
+			#powb {
+				position:absolute;
+				left:730px;
+				top:210px;
+				background : url("i_sbt.png") no-repeat;
+				width:473px;
+				height:523px;
+			}
+			#powb:hover {
+				background : url("i_sbth.png") no-repeat;
+				cursor:pointer;
+			}
+
+/* 인트로 부분 끝 */
+
+			#div1{
+				position:absolute;
+				left:0px;
+				top:2px;
+				z-index:2;
+				background:url("i_Room1.jpg") no-repeat;
+				width:1920px;
+				height:940px;
+			}
+			#diff{
+				display:none;
+			}
+			#desk{
+				position:absolute;
+				left:420px;
+				top:570px;
+				width:1100px;
+				height:400px;
+				background:url("i_desk.png") no-repeat;
+			}
+			#R1_R4_move{
+				position:absolute;
+				left:20px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Left_move.png") no-repeat;
+			}
+			#R1_R4_move:hover{
+				background:url("i_Left_hover_move.png") no-repeat;
+			}
+			#R1_R2_move{
+				position:absolute;
+				left:1750px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Right_move.png") no-repeat;
+			}
+			#R1_R2_move:hover{
+				background:url("i_Right_hover_move.png") no-repeat;
+			}
+
+/* 방 첫번째 위치 끝 */
+
+			#div2{
+				position:absolute;
+				top:2px;
+				left:1921px;
+				z-index:2;
+				background:url("i_Room2.jpg") no-repeat;
+				width:1920px;
+				height:940px;
+			}
+			#R2_R1_move{
+				position:absolute;
+				left:20px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Left_move.png") no-repeat;
+			}
+			#R2_R1_move:hover{
+				background:url("i_Left_hover_move.png") no-repeat;
+			}
+			#R2_R3_move{
+				position:absolute;
+				left:1750px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Right_move.png") no-repeat;
+			}
+			#R2_R3_move:hover{
+				background:url("i_Right_hover_move.png") no-repeat;
+			}
+
+/* 방 두번째 위치 끝 */
+
+			#div3{
+				position:absolute;
+				top:2px;
+				left:3842px;
+				z-index:1;
+				background:url("i_Room3.jpg") no-repeat;
+				width:1920px;
+				height:940px;
+			}
+			#R3_R2_move{
+				position:absolute;
+				left:20px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Left_move.png") no-repeat;
+			}
+			#R3_R2_move:hover{
+				background:url("i_Left_hover_move.png") no-repeat;
+			}
+			#R3_R4_move{
+				position:absolute;
+				left:1750px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Right_move.png") no-repeat;
+			}
+			#R3_R4_move:hover{
+				background:url("i_Right_hover_move.png") no-repeat;
+			}
+
+/* 방 세번째 위치 끝 */
+
+			#div4{
+				position:absolute;
+				top:2px;
+				left:-1919px;
+				z-index:0;
+				background:url("i_Room4.jpg") no-repeat;
+				width:1920px;
+				height:940px;
+			}
+			#R4_R3_move{
+				position:absolute;
+				left:20px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Left_move.png") no-repeat;
+			}
+			#R4_R3_move:hover{
+				background:url("i_Left_hover_move.png") no-repeat;
+			}
+			#R4_R1_move{
+				position:absolute;
+				left:1750px;
+				top:765px;
+				width:150px;
+				height:150px;
+				cursor:pointer;
+				background:url("i_Right_move.png") no-repeat;
+			}
+			#R4_R1_move:hover{
+				background:url("i_Right_hover_move.png") no-repeat;
+			}
+
+/* 방 네번째 위치 끝 */
+
+			#divh{
+				position:absolute;
+				top:941px;
+				background-color : black;
+				width:1920px;
+				height:940px;
+			}
+			#htit{
+				position:absolute;
+				left:-50px;
+				top:15px;
+				width:300px;
+				height:150px;
+			}
+			#hmoni{
+				position:absolute;
+				left:145px;
+				top:0px;
+				width:1600px;
+				height:940px;
+			}		
+			#hstar{
+				position:absolute;
+				left:320px;
+				top:95px;
+				width:105px;
+				height:118px;
+				cursor:pointer;
+				background:url("i_hardstart.png") no-repeat;
+			}
+			#hstar:hover{
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:1920px;
+				height:937px;
+				background:url("i_Ghost2.png") no-repeat;
+			}
+			#hdiff{
+				position:absolute;
+				left:1470px;
+				top:600px;;
+				width:130px;
+				height:70px;
+				cursor:pointer;
+				background:url("i_Normal.png") no-repeat;
+			}
+			#hdiff:hover{
+				background:url("i_Normal_s.png") no-repeat;
+			}
+
+/* 히든 하드모드 끝 */

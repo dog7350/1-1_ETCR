@@ -1,0 +1,31 @@
+/* login.css */
+	#logindiv{
+		position:absolute;
+		left:60px;
+		top:200px;
+		width:1800px;
+		height:663px;
+		text-align:center;
+	}
+	form{
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:1800px;
+		height:663px;
+	}
+	#loginbuti{
+		position:absolute;
+		left:800px;
+		top:440px;
+		width:204px;
+		height:93px;
+		background-size:204px 93px;
+		background-image:url("i_login.png");
+	}
+	#loginbuti:hover{
+		background-image:url("i_loginh.png");
+	}
+	#loginbuti:active{
+		background-image:url("i_logina.png");
+	}

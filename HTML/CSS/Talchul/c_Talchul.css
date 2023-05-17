@@ -1,0 +1,37 @@
+	*{
+		margin:0px;
+		padding:0px;
+	}
+	body{
+		background-color:gray;
+		overflow:hidden;
+	}
+	#Taldiv{
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:1920px;
+		height:937px;
+		background-size:1920px 937px;
+		background-image:url("Talchul.png");
+		background-repeat:no-repeat;
+		animation-name:escape;
+		animation-duration:3s;
+	}
+
+	@keyframes escape{
+	0%{
+		left:0px;
+		top:0px;
+		width:1920px;
+		height:937px;
+		background-size:1920px 937px;
+	}
+	100%{
+		left:-300px;
+		top:-100px;
+		width:2520px;
+		height:1237px;
+		background-size:2520px 1237px;
+	}
+	}

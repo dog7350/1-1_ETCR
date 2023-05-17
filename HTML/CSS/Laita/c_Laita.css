@@ -1,0 +1,327 @@
+/* game system */
+
+	#skyt{
+		position:absolute;
+		left:150px;
+		top:250px;
+		width:700px;
+		height:300px;
+		background-image:url("i_skytable.png");
+	}
+	#yang1{
+		position:absolute;
+		left:300px;
+		top:250px;
+		width:200px;
+		height:250px;
+		background-image:url("i_fireon.png");
+	}
+	#yang2{
+		position:absolute;
+		left:1400px;
+		top:250px;
+		width:200px;
+		height:250px;
+		background-image:url("i_fireon.png");
+	}
+	#noyang{
+		position:absolute;
+		left:840px;
+		top:250px;
+		width:200px;
+		height:250px;
+		background-image:url("i_fireoff.png");
+	}
+	#noyahit{
+		position:absolute;
+		left:920px;
+		top:280px;
+		width:35px;
+		height:35px;
+		cursor:pointer;
+	}
+	#fireon:checked ~ ul #noyahit{
+		border:1px solid gray;
+	}
+/* 라이터 맵*/
+	#i1div{
+		position:absolute;
+		left:1400px;
+		top:830px;
+		width:106px;
+		height:70px;
+		background-image:url("i_girm_laita.png");
+		cursor:pointer;
+	}
+	#i2div{
+		position:absolute;
+		left:270px;
+		top:260px;
+		width:100px;
+		height:140px;
+		background-image:url("i_laita_oil.png");
+		cursor:pointer;
+	}
+	#i3div{
+		position:absolute;
+		left:430px;
+		top:20px;
+		width:15px;
+		height:15px;
+		background-color:red;
+		cursor:pointer;
+	}
+	#i4div{
+		position:absolute;
+		left:800px;
+		top:900px;
+		width:15px;
+		height:15px;
+		background-color:red;
+		cursor:pointer;
+	}
+/* 아이템 끝 */
+
+	#jb1div{
+		position:absolute;
+		left:1780px;
+		top:650px;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#jb1div:hover{
+		background:url("i_jobuh.jpg") no-repeat;
+	}
+	#jb1:checked ~ ul #jb1div{
+		background:url("i_jobua.jpg") no-repeat;
+	}
+	#jb2div{
+		display:none;
+	}
+	#jb2div:hover{
+		background:url("i_jobuh.jpg") no-repeat !important;
+	}
+	#jb2:checked ~ ul #jb2div{
+		background:url("i_jobua.jpg") no-repeat !important;
+	}
+	#jb3div{
+		display:none;
+	}
+	#jb3div:hover{
+		background:url("i_jobuh.jpg") no-repeat !important;
+	}
+	#jb3:checked ~ ul #jb3div{
+		background:url("i_jobua.jpg") no-repeat !important;
+	}
+/* 아이템 조합 버튼 끝 */
+
+	#ji1div{
+		display:none;
+	}
+	#ji2div{
+		display:none;
+	}
+	#ji3div{
+		display:none;
+	}
+/* 조합 아이템 끝 */
+
+	#doordiv{
+		position:absolute;
+		left:670px;
+		top:50px;
+		width:550px;
+		height:800px;
+		background:url("i_Door.png") no-repeat;
+		cursor:no-drop;
+	}
+/* 문 끝 */
+
+	#islot1{
+		position:absolute;
+		left:1780px;
+		top:2px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#islot2{
+		position:absolute;
+		left:1780px;
+		top:152px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#islot3{
+		position:absolute;
+		left:1780px;
+		top:302px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#islot4{
+		position:absolute;
+		left:1780px;
+		top:452px;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 아이템 기본 슬롯 끝 */
+
+	#bisd1{
+		position:absolute;
+		left:1780px;
+		top:2px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bisd2{
+		position:absolute;
+		left:1780px;
+		top:152px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bisd3{
+		position:absolute;
+		left:1780px;
+		top:302px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bisd4{
+		position:absolute;
+		left:1780px;
+		top:452px;
+		z-index:-1;
+		width:130px;
+		height:130px;
+		background:url("i_islot.jpg") no-repeat;
+		cursor:pointer;
+	}
+	#bjo{
+		position:absolute;
+		left:1780px;
+		top:650px;
+		z-index:-1;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 백그라운드 아이템 슬롯 끝*/
+
+	#bisl1:checked ~ ul #bisd1{
+		border:3px outset skyblue;
+	}
+	#bisl2:checked ~ ul #bisd2{
+		border:3px outset skyblue;
+	}
+	#bisl3:checked ~ ul #bisd3{
+		border:3px outset skyblue;
+	}
+	#bisl4:checked ~ ul #bisd4{
+		border:3px outset skyblue;
+	}
+	#bjo:hover{
+		background:url("i_jobuh.jpg") no-repeat;
+	}
+	#bjob:checked ~ ul #bjo{
+		background:url("i_jobua.jpg") no-repeat;
+	}
+/* 백그라운드 아이템 슬롯 선택 끝*/
+
+	#i1:checked ~ ul #islot1{
+		background-image:url("i_item_laita.png");
+	}
+	#i1:checked ~ ul #i1div{
+		display:none;
+	}
+	#i2:checked ~ ul #islot2{
+		background-image:url("i_item_laita_oil.png");
+	}
+	#i2:checked ~ ul #i2div{
+		display:none;
+	}
+
+/* 기본 아이템 획득 끝 */
+
+	#isl1:checked ~ ul #islot1{
+		border:3px outset skyblue;
+	}
+	#isl2:checked ~ ul #islot2{
+		border:3px outset skyblue;
+	}
+	#isl3:checked ~ ul #islot3{
+		border:3px outset skyblue;
+	}
+	#isl4:checked ~ ul #islot4{
+		border:3px outset skyblue;
+	}
+	#ji1:checked ~ ul #ji1div{
+		border:3px outset skyblue;
+	}
+/* 획득 아이템 선택 끝 */
+
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #ji1div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:2px;
+		width:130px;
+		height:130px;
+		background-image:url("i_item_fire_laita.png");
+		cursor:pointer;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #islot1{
+		display:none;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #islot2{
+		display:none;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #jb1div{
+		display:none;
+	}
+	#i1:checked + #i2:checked + #isl1:checked + #isl2:checked + #jb1:checked ~ ul #jb2div{
+		display:block;
+		position:absolute;
+		left:1780px;
+		top:650px;
+		width:130px;
+		height:50px;
+		background:url("i_jobu.jpg") no-repeat;
+		cursor:pointer;
+	}
+/* 라이터 아이템 조합 끝 */
+	#ji1:checked + #fireon:checked ~ ul #noyang{
+		background-image:url("i_fireon.png");
+	}
+	#ji1:checked + #fireon:checked ~ ul #ji1div{
+		display:none !important;
+	}
+	#ji1:checked + #fireon:checked ~ ul #moni_off{
+		display:none;
+	}
+	#ji1:checked + #fireon:checked ~ ul #noyahit{
+		display:none;
+	}
+/* 양초 불붙이기 끝 */
+/* 라이터 맵 탈출 */
